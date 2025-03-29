@@ -9,3 +9,8 @@ class Gato(Animal):
   def hacer_sonido(self):
     print(f"{self.nombre} esta maullando")
     print("Miau 🐈")
+
+  def sobrevive(self):
+    if self.edad > 15 or self.vidas > 1:
+      self.vidas -= 1
+      return self.vidas
