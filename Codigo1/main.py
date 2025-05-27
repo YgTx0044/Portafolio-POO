@@ -1,48 +1,40 @@
-# Importacion de las clases
-from animal import Animal
 from perro import Perro
 from gato import Gato
-from ave import Ave
-from murcielago import Murcielago
-from ornitorrinco import Ornitorrinco
+from animal import Animal
 
-# Cuerpo principal (Main)
 def main():
-  leon = Animal("Lion", 5)
-  leon.hacer_sonido()
-  print("-----------------------------------------") # Print eunicamente estetico
+  perro = Perro("Firulais", 5, "Urbano")
+  gato = Gato("Garfield", 3, 7)
 
-  perro = Perro("Churro", 3, "Salchicha")
+  perro.comer()
+  perro.dormir()
   perro.hacer_sonido()
-  print("-----------------------------------------")
+  print(f'Es cachorro? {perro.es_cachorro()}')
 
-  gato = Gato("Michi", 2, 7)
+  gato.comer()
   gato.hacer_sonido()
-  print("Vida(s) restantes:", gato.vidas)
-  print("Atropellado" if not gato.sobrevive() else "VIVE")
-  print("Vida(s) restantes:", gato.vidas)
-  print("Intoxicado" if not gato.sobrevive() else "VIVE")
-  print("Vida(s) restantes:", gato.vidas)
-  print("Electrocutado" if not gato.sobrevive() else "VIVE")
-  print("Vida(s) restantes:", gato.vidas)
-  print("-----------------------------------------")
+  print(f'Vidas? {gato.vidas}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Vidas? {gato.vidas}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Vidas? {gato.vidas}')
+  gato.edad = 16
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Vidas? {gato.vidas}')
+  print(f'Sobrevive? {gato.sobrevive()}')
+  print(f'Vidas? {gato.vidas}')
 
-  ave = Ave("KP", 1)
-  ave.hacer_sonido()
-  print("-----------------------------------------")
+  del gato
+  del perro
 
-  dracula = Murcielago("Dracula", 100, "Vampiro")
-  dracula.hacer_sonido()
-  dracula.soy_un()
-  print("-----------------------------------------")
-
-  perry = Ornitorrinco("Perry", 5)
-  perry.hacer_sonido()
-  print(f"{perry.nombre} ha puesto {perry.NUMERO_HUEVOS} huevos")
-  for i in range(3):
-    print(f"{perry.nombre} ha puesto {perry.NUMERO_HUEVOS} huevos")
-
-  print("-----------------------------------------")
+  pikachu = Animal("Pikachu", 2)
+  pikachu.hacer_sonido()
+  pikachu.comer()
+  pikachu.dormir()
+  del pikachu
 
 if __name__ == "__main__":
   main()
