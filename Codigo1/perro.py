@@ -12,3 +12,6 @@ class Perro(Animal):
 
   def es_cachorro(self):
     return self.edad < 2
+    
+  def comer(self):
+      print(f'{self.nombre} esta comiendo 🦴')
